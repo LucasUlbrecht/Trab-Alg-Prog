@@ -39,9 +39,20 @@ struct Aluno{
 };
 
 
+// Funções ler arquivos
 int lerArquivos(FILE* acertos, FILE* cursosPesos, FILE* cursosVagas, FILE* dados, struct Curso* lcCurso);
+void gerarListaCursos(FILE** cursosPesos, FILE** cursosVagas, Curso* lcPesos);
+void quickSortCurso(Curso* lcPesos, int init, int end);
+int organizaCurso(Curso* lcPesos, int init, int end);
+void trocaCursos(Curso* lcPesosInit, Curso* lcPesosEnd);
+
+
+
 void retornarArquivos();
 int pesquisarPessoa();
 void listarReprovados();
 void listarAprovados();
-void encerrarPrograma(FILE** acertos, FILE** cursosPesos, FILE** cursosVagas, FILE** dados);
+
+//Funções encerrar programa
+void encerrarPrograma(FILE** acertos, FILE** cursosPesos, FILE** cursosVagas, FILE** dados, Curso* lcCurso);
+void encerrarListaCursos(Curso* lcCurso);
