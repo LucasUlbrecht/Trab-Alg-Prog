@@ -41,7 +41,7 @@ struct Aluno{
 
 // Funções ler arquivos
 int lerArquivos(FILE* acertos, FILE* cursosPesos, FILE* cursosVagas, FILE* dados, struct Curso* lcCurso);
-void gerarListaCursos(FILE** cursosPesos, FILE** cursosVagas, struct Curso* lcPesos);
+void gerarListaCursos(FILE* cursosPesos, FILE* cursosVagas, struct Curso* lcPesos);
 void quickSortCurso(struct Curso* lcPesos, int init, int end);
 int organizaCurso(struct Curso* lcPesos, int init, int end);
 void trocaCursos(struct Curso* lcPesosInit, struct Curso* lcPesosEnd);
@@ -54,5 +54,5 @@ void listarReprovados();
 void listarAprovados();
 
 //Funções encerrar programa
-void encerrarPrograma(FILE** acertos, FILE** cursosPesos, FILE** cursosVagas, FILE** dados, struct Curso* lcCurso);
-void encerrarListaCursos(struct Curso* lcCurso);FILE** dados);
+void encerrarPrograma(FILE* acertos, FILE* cursosPesos, FILE* cursosVagas, FILE* dados, struct Curso* lcCurso);
+void encerrarListaCursos(struct Curso* lcCurso);

@@ -3,7 +3,7 @@
 int menu(int status);
 
 int main (){
-    Curso* lcCurso;
+    struct Curso* lcCurso;
     FILE* acertos,* cursosPesos,* cursosVagas,* dados;
     int resposta, status, aux;
     status=0;
@@ -28,7 +28,7 @@ int main (){
             //listarAprovados();
         }
         else{
-            encerrarPrograma(&acertos, &cursosPesos, &cursosVagas, &dados, lcCurso);
+            encerrarPrograma(acertos, cursosPesos, cursosVagas, dados, lcCurso);
             return 0;
         }
     }while(1);
@@ -40,11 +40,11 @@ int menu(int status){
         if(status==0){
             printf("Receber Arquivos de Entrada - 0\n");
         }
-        printf("Opção 1\n");
-        printf("Opção 2\n");
-        printf("Opção 3\n");
-        printf("Opção 4\n");
-        printf("Opção 5\n");
+        printf("O\n");
+        printf("O\n");
+        printf("O\n");
+        printf("O\n");
+        printf("O\n");
         scanf("%d", &resposta);
     }while(resposta<-1 && resposta>6);
     return resposta;
